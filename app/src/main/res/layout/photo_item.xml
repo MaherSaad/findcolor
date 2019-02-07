@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:gravity="center"
+    android:orientation="vertical">
+    <com.androidnetworking.widget.ANImageView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:id="@+id/imageView"/>
+    <Button
+        android:id="@+id/show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="#fff"
+        android:text="عرض الرقم"/>
+</LinearLayout>
