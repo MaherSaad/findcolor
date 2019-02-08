@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.findcolors.R;
+import com.example.findcolors.util.ColorUtils;
 
 /*
 استخدام مكتبة palette الخاصة بجوجل للحصول علي الالوان من الصور
@@ -120,13 +121,18 @@ public class CameraActivity extends AppCompatActivity {
                         int color = swatch.getRgb();
                         colorIndicator.setBackgroundColor(color);
                         colorIndicator.setTextColor(swatch.getTitleTextColor());
-                        colorIndicator.setText("اللون المسيطر");
 
-                        red.setText("الاحمر : " + Color.red(color));
-                        green.setText("الاخضر : "+ Color.green(color) );
-                        blue.setText("الازرق : " +Color.blue(color));
+                        int redColor = Color.red(color);
+                        int greenColor = Color.green(color);
+                        int blueColor = Color.blue(color);
+
+                        red.setText("الاحمر : " + redColor);
+                        green.setText("الاخضر : "+ greenColor );
+                        blue.setText("الازرق : " +blueColor);
                         colors.setVisibility(View.VISIBLE);
 
+                        String colorName = new ColorUtils().getColorNameFromRgb(redColor,greenColor,blueColor);
+                        colorIndicator.setText(  "اللون المسيطر : " + colorName);
 
                     } else {
                         colorIndicator.setText("خطأ في التعرف علي اللون");

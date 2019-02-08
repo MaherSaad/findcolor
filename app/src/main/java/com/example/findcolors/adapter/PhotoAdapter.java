@@ -15,6 +15,11 @@ import com.example.findcolors.util.PhotosModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+    - استخدام مكتبة Fast Android Networking Library
+   لتحميل الصور من الويب سيرفس إلي التطبيق
+     */
+
 public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.Photo> {
     List<PhotosModel> data;
     private PhotoClickListener listener;
